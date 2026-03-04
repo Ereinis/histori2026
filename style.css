@@ -1,0 +1,147 @@
+*{margin:0;padding:0;box-sizing:border-box}
+body {
+  font-family: Inter, sans-serif;
+  color: #f5d9a6;
+
+  background:
+    linear-gradient(rgba(134, 113, 74, 0.578), rgba(172, 133, 78, 0.244)),
+    url("background.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+}
+
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:24px 64px;
+    border-bottom:1px solid rgba(255,215,150,.2)
+}
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    font-family:Cinzel,serif;
+    font-size:22px;
+    font-weight:700
+}
+nav{
+    display:flex;
+    gap:32px;
+    font-size:15px
+}
+nav a{
+    text-decoration:none;
+    color:#e8c98b;
+    opacity:.85
+}
+nav a:hover{opacity:1}
+.hero{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:50px 24px
+}
+.hero h1{
+    font-family:Cinzel,serif;
+    font-size:64px;
+    font-weight:700;
+    margin-bottom:24px
+}
+.hero p{
+    font-size:28px;
+    max-width:800px;
+    margin-bottom:40px;
+    opacity:.9
+}
+.hero button{
+    background:linear-gradient(135deg,rgb(#dcbd60),rgb(#dcbd60));
+    border:none;
+    border-radius:12px;
+    padding:14px 36px;
+    font-size:20px;
+    font-weight:500;
+    color:#000000;
+    cursor:pointer
+}
+.hero button:hover{opacity:.9}
+.container {
+  max-width: 800px;     /* kontrollon gjerësinë */
+  margin: 0 auto;       /* e vendos në qendër */
+}
+
+.container p {
+  text-align: left;     /* tekst majtas */
+  line-height: 1.7;
+  font-size: 17px;
+  margin-bottom: 24px;
+}
+@media (max-width: 768px) {
+
+  header{
+    padding:18px 20px;
+  }
+
+  nav{
+    gap: 16px;
+    font-size: 14px;
+  }
+
+  .hero h1{
+    font-size: 44px;
+  }
+
+  .hero p{
+    font-size: 18px;
+    max-width: 100%;
+  }
+
+  .hero button{
+    padding: 12px 26px;
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  header{
+    flex-direction:column;
+    gap: 12px;
+    align-items:flex-start;
+  }
+
+  nav{
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .logo{
+    font-size: 20px;
+  }
+
+  .hero{
+    padding: 40px 16px;
+  }
+
+  .hero h1{
+    font-size: 36px;
+  }
+
+  .hero p{
+    font-size: 16px;
+    margin-bottom: 30px;
+  }
+
+  .hero button{
+    width: 100%;
+    max-width: 260px;
+  }
+  
+}

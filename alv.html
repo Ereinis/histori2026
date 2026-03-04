@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pesha e Fjalës – Analizë veprash letrare</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      color: #f5d9a6;
+        background:
+          linear-gradient(rgba(188, 157, 101, 0.578), rgba(172, 133, 78, 0.244)),
+          url("Jan\ 17\,\ 2026\,\ 09_43_19\ PM.png");
+
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 64px;
+      border-bottom: 1px solid rgba(255, 200, 140, 0.25);
+    }
+
+    .logo {
+      font-family: Cinzel, serif;
+      font-size: 22px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e8c98b;
+      font-size: 15px;
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* ===== PAGE CONTENT ===== */
+    .analysis-page {
+      padding: 80px 64px 120px;
+    }
+
+    .analysis-header {
+      max-width: 720px;
+      margin: 0 auto 64px;
+      text-align: center;
+    }
+
+    .analysis-header h1 {
+      font-family: Cinzel, serif;
+      font-size: 48px;
+      margin-bottom: 16px;
+    }
+
+    .analysis-header p {
+      font-size: 17px;
+      line-height: 1.6;
+      opacity: 0.85;
+    }
+
+    /* ===== GRID ===== */
+    .analysis-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+      gap: 32px;
+      max-width: 1600px;
+      margin: 0 auto;
+    }
+
+    /* ===== CARD ===== */
+    .analysis-card {
+      background:linear-gradient(135deg,#b5651d,#f68c2f);
+      border: 1px solid rgba(255, 190, 120, 0.3);
+      border-radius: 16px;
+      padding: 28px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+      cursor: pointer;
+    }
+
+    .analysis-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 190, 120, 0.6);
+    }
+
+    .analysis-card h3 {
+      font-family: Cinzel, serif;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .analysis-card p {
+      font-size: 15px;
+      line-height: 1.6;
+      opacity: 0.85;
+      margin-bottom: 20px;
+    }
+
+    .analysis-card span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #f2c87c;
+    }
+
+    .full-analysis {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease, opacity 0.3s ease;
+      opacity: 0;
+    }
+
+    .analysis-card.expanded .full-analysis {
+      max-height: 650px;
+      opacity: 1;
+    }
+
+    .read-more {
+      cursor: pointer;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+
+    @media (max-width: 1024px) {
+  .analysis-page {
+    padding: 60px 32px 100px;
+  }
+
+  header {
+    padding: 18px 30px;
+  }
+
+  .analysis-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .analysis-page {
+    padding: 50px 20px 90px;
+  }
+
+  .analysis-header h1 {
+    font-size: 40px;
+  }
+
+  .analysis-card {
+    padding: 22px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .analysis-header h1 {
+    font-size: 32px;
+  }
+
+  .analysis-header p {
+    font-size: 15px;
+  }
+
+  .analysis-card h3 {
+    font-size: 18px;
+  }
+
+  .analysis-card p {
+    font-size: 14px;
+  }
+
+  .analysis-card {
+    padding: 18px;
+  }
+
+  .read-more {
+    font-size: 13px;
+  }
+}
+
+.analysis-card.expanded {
+  border-color: rgba(255, 200, 140, 0.8);
+}
+
+  </style>
+</head>
+
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">📖 Pesha e Fjalës</div>
+    <nav>
+    <a href="index.html">Kryefaqja</a>
+    <a href="alv.html">Analizë veprash letrare</a>
+    <a href="rstk.html">Multimedia</a>
+    <a href="rstkinter.html">Interaktive</a>
+    <a href="njtprgj.html">Produkti</a>
+    </nav>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <section class="analysis-page">
+
+    <div class="analysis-header">
+      <h1>Analizë veprash letrare</h1>
+      <p>
+        Analiza të strukturuara dhe të qarta për veprat kryesore të letërsisë
+        shqiptare dhe botërore, të përshtatshme për nxënës dhe studentë.
+      </p>
+    </div>
+
+    <div class="analysis-grid">
+
+      <div class="analysis-card">
+        <h3>Migjeni – Poema e mjerimit</h3>
+
+        <p class="preview">
+          1. “Kafshatë që s'kapërdihet asht, or vlla, mjerimi…”
+          <br>2. “Mjerimi punon, punon dit e natë…”
+          <br>3. “Mjerimi s'don mshirë. Por don vetëm të drejt!”
+        </p>
+
+        <!-- PJESA E FSHEHUR -->
+        <div class="full-analysis">
+          <p>
+            Fragmenti i parë tregon dhimbjen dhe shtypjen që njerëzit përjetojnë në jetën e përditshme; fjala është e frikshme dhe e rëndë, duke krijuar një ndjenjë të pamundur për t’u kapërcyer.
+            <br>Fragmenti i dytë paraqet padrejtësinë ekonomike dhe shfrytëzimin social; thekson vuajtjen e vazhdueshme dhe dhunën që shoqëria ushtron mbi individin.
+            <br>Fragmenti i tretë, megjithatë, shfaq një përpjekje për drejtësi; këtu fjala është kritike dhe drejtësuese, duke nxitur reagim dhe ndërgjegjësim për ndryshim.
+
+          </p>
+        </div>
+
+        <span class="read-more">Lexo analizën →</span>
+      </div>
+
+
+      <div class="analysis-card">
+        <h3>Gjergj Fishta – Lahuta e Malcis</h3>
+
+        <p class="preview">
+          1.	“Hej, moj Zânë, ti kjosh e bardhë! Me u kumtue me ‘i kangë kreshnike, me këndue lavdinë e të parëve e me mbajtë gjallë shpirtin kombëtar…”
+          <br>2.	“Prandaj vetë u çova fjalë Dér n’ London nji herë me dalë, Na ktû s’ bashku me vendue, Ket Shqypní si m’ e shestue…”
+
+        </p>
+
+        <!-- PJESA E FSHEHUR -->
+        <div class="full-analysis">
+          <p>
+            Fragmenti i parë është ndërtues dhe frymëzues; përdorimi i fjalës promovon heroizmin shqiptar dhe ndjenjën e krenarisë kombëtare.
+            <br>Fragmenti i dytë tregon përdorimin e fjalës për organizim dhe mbrojtje të kombit; fjala këtu nxit drejtësi, vendosmëri dhe ndjenjën e vetëvendosjes.
+
+
+          </p>
+        </div>
+
+        <span class="read-more">Lexo analizën →</span>
+      </div>
+
+      <div class="analysis-card">
+        <h3>Fan Noli – Fjalimi në Lidhjen e Kombeve</h3>
+
+        <p class="preview">
+          1.	“Është e vërtetë që Lidhja e Kombeve ka bërë disa shërbime të vogla… por mos më jepni atë hua prej 500 milionësh fr.ar., që më premtuat…”
+          <br>2.	“…varroseni në dosjet e vdekura të Sekretariatit… kjo do të thotë, natyrisht, se e gjithë kjo histori ka mbaruar siç mbarojnë flluskat e sapunit.”
+
+
+        </p>
+
+        <!-- PJESA E FSHEHUR -->
+        <div class="full-analysis">
+          <p>
+            Fragmenti i parë përdor gjuhën kritike dhe të mençur për të denoncuar padrejtësinë ndërkombëtare; fjala shërben si instrument për drejtësi dhe kërkesë zgjidhjesh.
+            <br>Fragmenti i dytë është ironik dhe i fuqishëm; tregon mungesën e përgjegjësisë dhe dhunën burokratike, duke nxitur reflektim dhe ndërgjegjësim.
+          </p>
+        </div>
+
+        <span class="read-more">Lexo analizën →</span>
+      </div>
+
+
+      <div class="analysis-card">
+        <h3>Tekst Mediatik</h3>
+
+        <p class="preview">
+           Tekst Mediatik
+            <br>Tema: Pesha e fjalës në ndërgjegjësimin shoqëror
+            <br>Është thënë: Në një mesazh sensibilizues për mbrojtjen e mjedisit
+            <br>Data: 05.11.2025
+
+        </p>
+
+        <!-- PJESA E FSHEHUR -->
+        <div class="full-analysis">
+          <p>
+            “Fjala ka fuqi të ndërtojë ose të shkatërrojë. Kur flasim për mjedisin, çdo fjalë e thënë me përgjegjësi ndihmon në ndërgjegjësimin e shoqërisë, ndërsa fjalët e thëna pa kujdes nxisin indiferencë. Një mesazh i qartë dhe i ndershëm mund të ndryshojë sjelljen e njerëzve dhe të kthejë kujdesin ndaj natyrës në veprim konkret.”
+            <br>
+            <br>Shpjegimi i gjuhës së përdorur dhe lidhja me “Peshën e fjalës”
+            <br>
+            <br>Gjuha e përdorur në këtë tekst është e qetë, e drejtpërdrejtë dhe ndërgjegjësuese. Fjalët janë zgjedhur me kujdes për të treguar se komunikimi ka ndikim të madh në mënyrën se si njerëzit mendojnë dhe veprojnë. Teksti thekson se fjala nuk është vetëm mjet informimi, por edhe përgjegjësi morale. Kjo lidhet drejtpërdrejt me konceptin “pesha e fjalës”, sepse tregon se fjalët e përdorura me kujdes mund të ndikojnë pozitivisht në shoqëri, ndërsa fjalët e pavlerësuara humbin fuqinë e tyre dhe dëmtojnë mesazhin.
+          </p>
+        </div>
+
+        <span class="read-more">Lexo analizën →</span>
+        </div>
+
+
+      <div class="analysis-card">
+        <h3>Biblografite e autorit</h3>
+
+        <p class="preview">
+            Migjeni – Poema e mjerimit
+            <br>1. https://letersishqip.com/migjeni/krijime-letrare/poema-e-mjerimit
+            <br>2. https://hasanprishtina.edu.mk/wp-content/uploads/2020/04/%E2%80%9DPoema-e-mjerimit%E2%80%9DMigjeni-faq.54.pdf
+            <br>
+            <br>Gjergj Fishta – Lahuta e Malcis
+            <br>3. https://letersishqip.com/gjergj-fishta/krijime-letrare/
+            <br>4. https://it.wikipedia.org/wiki/Il_liuto_della_montagna
+            <br>
+            <br>Fan Noli – Fjalimi në Lidhjen e Kombeve
+            <br>5. https://www.balkanweb.com/en/deklarata-e-fan-nolit-ne-1921-ne-lidhjen-e-kombeve-serbet-duan-te-pushtojne-malin-e-lures/
+            <br>6. https://en.wikipedia.org/wiki/Fan_Noli
+            <br>Platformë informuese për ndërgjegjësimin mjedisor
+            <br>“Green Future Albania”, artikull sensibilizues online, 2025
+
+        </p>
+
+        <!-- PJESA E FSHEHUR -->
+        <div class="full-analysis">
+          <p>
+            “Tenxheret politike dhe mediatike po bubullojnë dhe po bëjnë aq shumë zhurmë, sa duket sikur jo Shqipëria është ftuar në tryezën e paqes të Presidentit Trump, por një vend armik i Shqipërisë!... GËNJESHTËR që Shqipëria do të paguajë 1 miliard euro. GËNJESHTËR që palestinezët do të vijnë në Shqipëri. GËNJESHTËR… E vërteta është shumë e thjeshtë… Tenxheret politike dhe mediatike të Parlamentit tonë janë vetëm kanaçe të zhurmshme të Shqipërisë së vjetër.”
+            <br><br><br>Kjo gjuhë mund të konsiderohet kritike dhe konfliktuale ndaj mediave, sepse nënkupton se disa media po përhapin informacione të gabuara apo të ekzagjeruara. Kjo është një formë komunikimi që politikanët herë-herë përdorin për të delegjitimuar kritikat dhe për të mbrojtur pozicionin e tyre, duke e paraqitur vetë si objekt të sulmeve jo të bazuara.
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+
+</body>
+<script>
+  document.querySelectorAll(".read-more").forEach(button => {
+    button.addEventListener("click", () => {
+      const card = button.closest(".analysis-card");
+      card.classList.toggle("expanded");
+
+      button.textContent = card.classList.contains("expanded")
+        ? "Mbyll analizën ←"
+        : "Lexo analizën →";
+    });
+  });
+</script>
+</html>
