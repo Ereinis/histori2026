@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jeta e Skënderbeut</title>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Inter, sans-serif;
+      color: #f5d9a6;
+        background:
+          linear-gradient(rgba(134, 113, 74, 0.578), rgba(172, 133, 78, 0.244)),
+          url("background.jpg");
+
+      background-size: cover;
+      background-position: center;
+      min-height: 100vh;
+    }
+
+    /* ===== NAVBAR ===== */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 24px 64px;
+      border-bottom: 1px solid rgba(255, 200, 140, 0.25);
+    }
+
+    .logo {
+      font-family: Cinzel, serif;
+      font-size: 22px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    nav {
+      display: flex;
+      gap: 28px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #e8c98b;
+      font-size: 15px;
+      opacity: 0.85;
+    }
+
+    nav a:hover {
+      opacity: 1;
+    }
+
+    /* ===== PAGE ===== */
+    .cases-page {
+      padding: 90px 64px 120px;
+    }
+
+    .cases-header {
+      max-width: 760px;
+      margin: 0 auto 70px;
+      text-align: center;
+    }
+
+    .cases-header h1 {
+      font-family: Cinzel, serif;
+      font-size: 52px;
+      margin-bottom: 18px;
+    }
+
+    .cases-header p {
+      font-size: 17px;
+      line-height: 1.7;
+      opacity: 0.85;
+    }
+
+    /* ===== GRID ===== */
+    .cases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 36px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ===== CARD ===== */
+    .case-card {
+      background: rgba(32, 16, 8, 0.9);
+      border: 1px solid rgba(255, 190, 120, 0.3);
+      border-radius: 18px;
+      padding: 32px;
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .case-card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(255, 190, 120, 0.6);
+    }
+
+    .case-tag {
+      font-size: 12px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: #f2c87c;
+      margin-bottom: 12px;
+      display: inline-block;
+    }
+
+    .case-card h3 {
+      font-family: Cinzel, serif;
+      font-size: 22px;
+      margin-bottom: 14px;
+    }
+
+    .case-card p {
+      font-size: 15px;
+      line-height: 1.65;
+      opacity: 0.85;
+      margin-bottom: 22px;
+    }
+
+    .case-card span {
+      font-size: 14px;
+      font-weight: 500;
+      color: #f2c87c;
+    }
+
+    /* ===== VIDEO SECTION ===== */
+.video-section {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: center;
+}
+
+.video-box {
+  width: 50%;
+  background: rgba(32, 16, 8, 0.85);
+  border: 1px solid rgba(255, 190, 120, 0.35);
+  border-radius: 18px;
+  padding: 18px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 14px;
+}
+
+.video-caption {
+  margin-top: 14px;
+  font-size: 14px;
+  color: #f2c87c;
+  text-align: center;
+  opacity: 0.85;
+}
+
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .cases-page {
+        padding: 64px 24px 100px;
+      }
+
+      .cases-header h1 {
+        font-size: 42px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="logo">Skënderbeu</div>
+    <nav>
+    <a href="index.html">Kryefaqja</a>
+    <a href="jeta.html">Jeta e Skënderbeut</a>
+    <a href="beselidhja.html">Besëlidhja e Lezhës</a>
+    <a href="betejat.html">Betejat</a>
+    <a href="vdekja.html">Vdekja</a>
+    <a href="institucionet.html">Institucionet</a>
+    <a href="bibliografia.html">Bibliografia</a>
+    <a href="rstkinter.html">Interaktive</a>
+    <a href="rstk.html">Multimedia</a>
+    <a href="njtprgj.html">Libri Digjital</a>
+    </nav>
+  </header>
+
+  <!-- PAGE CONTENT -->
+  <section class="cases-page">
+    <div class="cases-header">
+      <h1>Jeta e Skënderbeut</h1>
+    </div>
+
+    1. Lindja dhe prejardhja <br>
+Gjergj Kastrioti Skënderbeu lindi më 6 maj 1405 në një familje princërore shqiptare që i përkiste dinastisë së njohur Kastrioti. Vendlindja e tij zakonisht lidhet me rajonin e
+Dibër, edhe pse disa burime historike përmendin edhe zonat përreth
+Krujë si pjesë të territoreve ku familja e tij jetonte dhe administronte tokat. Ai lindi në një periudhë shumë të trazuar për Arbërinë, kur fuqia e
+Perandoria Osmane po zgjerohej vazhdimisht në Ballkan dhe principatat shqiptare përpiqeshin të ruanin autonominë e tyre. Familja Kastrioti ishte ndër familjet më të rëndësishme feudale të kohës dhe kishte ndikim politik, ushtarak dhe ekonomik në një pjesë të madhe të Shqipërisë së Veriut dhe Lindjes.
+<br>
+<br>
+2. Prindërit e Skënderbeut<br>
+Babai i tij ishte
+Gjon Kastrioti, një princ shqiptar dhe sundimtar i një principate të rëndësishme në Arbëri. Ai ishte një nga fisnikët më të fuqishëm të kohës dhe kishte nën kontroll një territor të gjerë që përfshinte rajonet e Matit, Dibrës dhe zonat përreth. Nëna e Skënderbeut ishte
+Voisava Kastrioti, një grua me origjinë fisnike, për të cilën historianët kanë disa mendime të ndryshme mbi prejardhjen e saj, por që besohet se vinte nga një familje aristokrate e rajonit të Pollogut. Prindërit e Skënderbeut kishin një rol të rëndësishëm në jetën politike të Arbërisë dhe përpiqeshin të ruanin balancën mes fuqive të mëdha si osmanët dhe Republika e Venedikut.
+<br>
+<br>
+3. Vëllezërit dhe motrat<br>
+Skënderbeu ishte pjesë e një familjeje të madhe fisnike. Ai kishte tre vëllezër: Reposh Kastrioti, Stanisha Kastrioti dhe Kostandin Kastrioti. Gjithashtu kishte edhe pesë motra: Mara, Jelena, Angjelina, Vlajka dhe
+Mamica Kastrioti. Në familjet fisnike të asaj kohe, fëmijët shpesh martoheshin me anëtarë të familjeve të tjera aristokrate për të krijuar aleanca politike dhe ushtarake. Motrat e Skënderbeut u martuan me princër dhe fisnikë të rajoneve të ndryshme, duke forcuar lidhjet politike të familjes Kastrioti në Ballkan.
+<br>
+<br>
+4. Principata dhe tokat e Gjon Kastriotit<br>
+Principata e
+Gjon Kastrioti shtrihej në një territor të gjerë dhe strategjik në Arbëri. Ajo përfshinte rajone të rëndësishme si Mati, Dibra, Mirdita dhe zona të tjera që shtriheshin deri në rrugët tregtare që lidhnin bregdetin me brendësinë e Ballkanit. Tokat e tij ndodheshin në një pozicion shumë të rëndësishëm midis qyteteve si
+Lezhë dhe
+Prizren, të cilat ishin qendra të rëndësishme ekonomike dhe ushtarake. Për shkak të presionit të vazhdueshëm të osmanëve, Gjon Kastrioti shpesh u detyrua të bëhej vasal i tyre dhe të paguante tribut, por ai gjithashtu përpiqej të ruante sa më shumë autonominë e principatës së tij.
+<br>
+<br>
+5. Marrja peng nga osmanët<br>
+Në fillim të shekullit XV, për të siguruar besnikërinë e princave shqiptarë,
+Perandoria Osmane përdorte një praktikë të zakonshme: merrte peng djemtë e familjeve fisnike dhe i dërgonte në oborrin e sulltanit. Në këtë mënyrë, edhe Gjergj Kastrioti u dërgua në oborrin osman në qytetin e
+Edirne kur ishte ende i ri. Atje ai u edukua sipas traditave dhe sistemit ushtarak osman dhe u konvertua në Islam, duke marrë emrin Iskender, që do të thotë Aleksandër. Ky emër iu dha në nder të Aleksandrit të Madh për shkak të talentit dhe aftësive që tregoi në trajnimet ushtarake.
+<br>
+<br>
+6. Edukimi dhe rritja në Perandorinë Osmane<br>
+Në oborrin e sulltanit, Skënderbeu mori një arsimim shumë të avancuar për kohën. Ai mësoi strategji ushtarake, administrim shtetëror, gjuhë të ndryshme dhe përdorimin e armëve. Trajnimi i tij përfshinte edhe disiplinën e fortë të sistemit ushtarak osman dhe përgatitjen për të qenë komandant në ushtri. Për shkak të inteligjencës dhe aftësive të tij të jashtëzakonshme në luftë dhe organizim, ai u dallua shpejt mes ushtarëve të tjerë dhe fitoi respektin e komandantëve osmanë. Ky formim ushtarak i dha atij përvojën që më vonë do ta përdorte për të organizuar rezistencën shqiptare kundër osmanëve.
+<br>
+<br>
+7. Karriera dhe postet në ushtrinë osmane<br>
+Gjatë shërbimit në ushtrinë e
+Perandoria Osmane, Skënderbeu u ngrit shpejt në hierarkinë ushtarake falë aftësive të tij. Ai fitoi titullin Bey, një titull që u jepej komandantëve dhe administratorëve të rëndësishëm. Për këtë arsye ai u bë i njohur si Iskender Bey, nga ku vjen edhe emri i tij i njohur në histori, Skënderbeu. Ai mori pjesë në disa fushata ushtarake në Ballkan dhe në rajone të tjera të perandorisë, duke komanduar njësi ushtarake dhe duke fituar përvojë të madhe në taktika dhe strategji lufte.
+<br>
+<br>
+8. Kthimi në Arbëri<br>
+Në vitin 1443, gjatë një beteje të madhe midis ushtrisë osmane dhe forcave të krishtera të udhëhequra nga
+John Hunyadi pranë qytetit të Niš, Skënderbeu vendosi të largohej nga ushtria osmane. Ai u kthye në Arbëri së bashku me një grup ushtarësh shqiptarë dhe arriti të marrë kontrollin e
+Kështjella e Krujës duke përdorur një dokument me vulën e sulltanit. Pas rikthimit, ai u kthye në fenë e krishterë dhe filloi organizimin e rezistencës shqiptare kundër Perandorisë Osmane, duke u bërë një nga figurat më të rëndësishme në historinë e Shqipërisë dhe Evropës.
+
+  </div>
+
+
+</div>
+
+
+    
+  </section>
+
+</body>
+</html>
+
