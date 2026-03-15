@@ -84,6 +84,46 @@ nav a:hover{opacity:1}
   text-align:center;
   padding:120px 24px;
 }
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 20px;
+  }
+
+  body {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+  }
+
+  .cases-page {
+    padding: 60px 20px 90px;
+  }
+
+  .cases-header h1 {
+    font-size: 36px;
+  }
+
+}
+nav {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding-bottom: 6px;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+nav a {
+  flex: 0 0 auto;
+}
 
 </style>
 
@@ -91,12 +131,12 @@ nav a:hover{opacity:1}
   <div class="logo">Skënderbeu</div>
   <nav>
     <a href="index.html">Kryefaqja</a>
-    <a href="">Jeta e Skënderbeut</a>
-    <a href="">Besëlidhja e Lezhës</a>
-    <a href="">Betejat</a>
-    <a href="">Vdekja</a>
-    <a href="">Institucionet</a>
-    <a href="">Bibliografia</a>
+    <a href="jeta.html">Jeta e Skënderbeut</a>
+    <a href="beselidhja.html">Besëlidhja e Lezhës</a>
+    <a href="betejat.html">Betejat</a>
+    <a href="vdekja.html">Vdekja</a>
+    <a href="institucionet.html">Institucionet</a>
+    <a href="bibliografia.html">Bibliografia</a>
     <a href="rstkinter.html">Interaktive</a>
     <a href="rstk.html">Multimedia</a>
     <a href="njtprgj.html">Libri Digjital</a>

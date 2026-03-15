@@ -165,47 +165,44 @@
 }
 
 @media (max-width: 768px) {
+
   header {
     flex-direction: column;
-    gap: 16px;
     align-items: flex-start;
+    gap: 10px;
+    padding: 16px 20px;
   }
 
-  nav {
-    flex-wrap: wrap;
-    gap: 12px;
+  body {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
   }
 
   .cases-page {
-    padding: 60px 18px 90px;
+    padding: 60px 20px 90px;
   }
 
   .cases-header h1 {
-    font-size: 42px;
+    font-size: 36px;
   }
+
+}
+nav {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding-bottom: 6px;
 }
 
-@media (max-width: 480px) {
-  .cases-page {
-    padding: 50px 14px 80px;
-  }
+nav::-webkit-scrollbar {
+  display: none;
+}
 
-  .cases-header h1 {
-    font-size: 34px;
-  }
-
-  .cases-header p {
-    font-size: 15px;
-  }
-
-  .chart-wrapper img {
-    width: 90%;   /* më i vogël në telefon */
-    max-width: none;
-  }
-
-  .chart-wrapper {
-    margin-top: 18px;
-  }
+nav a {
+  flex: 0 0 auto;
 }
   </style>
 </head>

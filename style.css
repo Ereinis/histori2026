@@ -85,28 +85,43 @@ nav a:hover{opacity:1}
 }
 @media (max-width: 768px) {
 
-  header{
-    padding:18px 20px;
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 20px;
   }
 
-  nav{
-    gap: 16px;
-    font-size: 14px;
+  body {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
   }
 
-  .hero h1{
-    font-size: 44px;
+  .cases-page {
+    padding: 60px 20px 90px;
   }
 
-  .hero p{
-    font-size: 18px;
-    max-width: 100%;
+  .cases-header h1 {
+    font-size: 36px;
   }
 
-  .hero button{
-    padding: 12px 26px;
-    font-size: 18px;
-  }
+}
+nav {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding-bottom: 6px;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+nav a {
+  flex: 0 0 auto;
 }
 
 @media (max-width: 480px) {
