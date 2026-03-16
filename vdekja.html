@@ -170,19 +170,45 @@
 
     /* ===== RESPONSIVE ===== */
     @media (max-width: 768px) {
-      header {
-        flex-direction: column;
-        gap: 16px;
-      }
 
-      .cases-page {
-        padding: 64px 24px 100px;
-      }
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 16px 20px;
+  }
 
-      .cases-header h1 {
-        font-size: 42px;
-      }
-    }
+  body {
+    background-size: cover;
+    background-position: center top;
+    background-attachment: scroll;
+  }
+
+  .cases-page {
+    padding: 60px 20px 90px;
+  }
+
+  .cases-header h1 {
+    font-size: 36px;
+  }
+
+}
+nav {
+  display: flex;
+  gap: 22px;
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  padding-bottom: 6px;
+}
+
+nav::-webkit-scrollbar {
+  display: none;
+}
+
+nav a {
+  flex: 0 0 auto;
+}
   </style>
 </head>
 
