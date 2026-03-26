@@ -84,6 +84,20 @@ nav a:hover{opacity:1}
   text-align:center;
   padding:120px 24px;
 }
+.chart-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;        /* e bën më të largët nga teksti */
+}
+
+.chart-wrapper img {
+  width: 55%;              /* e bën më të vogël */
+  max-width: 700px;        /* nuk e bën shumë të madhe në desktop */
+  filter: brightness(1); /* e errëson imazhin */
+  border-radius: 12px;     /* e bën më bukur */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.749);
+}
 @media (max-width: 768px) {
 
   header {
@@ -147,14 +161,27 @@ nav a {
   <div class="hero-text">
     <h1>PRODUKTI</h1>
   </div>
-
+  
   
 </section>
 
 <div id="tmpLoading" style="width: 100%; height: 100%; position: absolute; z-index: -2;background:#323232;"></div>
 	
 
-  <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/0eac6549e7.html" style="border: 1px solid lightgray; width: 100%; height: 400px;"></iframe>
+  <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/c4d10adb64.html" style="border: 1px solid lightgray; width: 100%; height: 400px;"></iframe>
+  <iframe allowfullscreen="allowfullscreen" allow="clipboard-write" scrolling="no" class="fp-iframe" src="https://heyzine.com/flip-book/59a4343da0.html" style="border: 1px solid lightgray; width: 100%; height: 400px;"></iframe>
+
+
+
+  <div class="chart-wrapper">
+      <img src="Mburojat foto dhe shkrim.png" alt="">
+  </div>
+  <div class="chart-wrapper">
+      <img src="Beslidhja e Lezhës.png" alt="">
+  </div>
+  <div class="chart-wrapper">
+      <img src="Mburojat e Skenderbeut.png" alt="">
+  </div>
 <script>
   function openFullScreen(){
     const frame = document.querySelector('.pdf-frame embed');
